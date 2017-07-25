@@ -4,4 +4,6 @@ var mew = {
     "legendary": true
 };
 
+
 console.log(mew.HP); 
+

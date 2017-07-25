@@ -9,4 +9,11 @@ for (i=0; i<15; i++){
 console.log (letters[Math.random])
 newArray.push(letters[Math.random])
 }    
-return newArray[];
+return newArray[]
+
+
+
+
+
+var firstPokemon = 
+var secondpokemon 

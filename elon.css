@@ -1,0 +1,36 @@
+body{
+
+    background: red;
+    background-size: cover;
+    background-position: center; 
+    text-align: center;
+}
+
+.img-circle { border-radius: 30%;
+    width: 55%;
+    height: 35%;
+    
+   
+}
+.mainPic{
+text-align: left;
+    display: inline;
+    
+}
+
+.stats {
+    width: 55%;
+    height: 35%;
+    border: 20px solid green;
+    padding: 20px;
+    margin: 25px;
+    text-align: center;
+    display: inline-block;
+  
+}
+
+.teslaPic{
+    border-radius: 70%;
+    width: 55%;
+    height: 35%;
+}

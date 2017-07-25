@@ -1,0 +1,12 @@
+body{
+
+    background: #ff4d4d;
+    background-size: cover;
+    background-position: center; 
+    text-align: center;
+}
+
+.singleburger{
+    background: red;
+    border: solid 3px purple;
+}
