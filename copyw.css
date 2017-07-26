@@ -34,7 +34,9 @@ body {
 /* Customize container */
 @media (min-width: 768px) {
   .container {
-    max-width: 1130px;
+    max-width: 930px;
+    background-color: white;
+    
   }
 }
 .container-narrow > hr {
@@ -44,11 +46,13 @@ body {
 /* Main marketing message and sign up button */
 .jumbotron {
   text-align: center;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid #ff0000;
+  background-image: url("https://s-media-cache-ak0.pinimg.com/originals/75/c6/7f/75c67fba5577aef6fd32069cc6456b30.jpg");
 }
 .jumbotron .btn {
   padding: 14px 24px;
   font-size: 21px;
+  
 }
 
 /* Supporting marketing content */
@@ -75,9 +79,14 @@ body {
   /* Remove the bottom border on the jumbotron for visual effect */
   .jumbotron {
     border-bottom: 0;
+    color: yellow;
   }
 }
 
 .nav>li>a:hover { 
     background-color: white !important;
+}
+
+.header clearfix>li>a{
+ color: brown;
 }
