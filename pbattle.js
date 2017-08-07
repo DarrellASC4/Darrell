@@ -1,21 +1,40 @@
-
-
 function setup(){
     createCanvas(650,650);
+    
 }
 var hp = 100;
 var hp2 = 100;
 
 
-
-
 function draw() {
   background(51, 153, 102);
-  ellipse(150, 400, 90, 90);
-  fill(1,1,1);
-  ellipse(475, 150, 90, 90);
-  fill(1,1,1);
+
+  fill(255, 255, 0);
+  ellipse(150, 400, 120, 120);
   
+  fill(1,1,1)
+  ellipse(130, 380, 25, 25)
+  ellipse(170, 380, 25, 25)
+  //triangle(36, 75, 58, 90, 80, 75);
+  triangle(160, 400, 150, 410, 140, 400);
+  arc(150, 430, 50, 40, 150, PI+QUARTER_PI, CHORD);
+  line(140, 420, 150, 430);
+
+  fill(242, 242, 242)
+  ellipse(135, 375, 11, 11)
+  ellipse(165, 375, 11, 11)
+
+  fill(255, 51, 0)
+  ellipse(110, 410, 25, 25)
+  ellipse(190, 410, 25, 25)
+  fill(255, 153, 102)
+  arc(150, 438, 25, 25, 150, PI+QUARTER_PI, CHORD);
+
+  fill(1,1,1)
+   line(150, 420, 150, 450);
+  
+  fill(255, 255, 0);
+  ellipse(475, 150, 120, 120);
   rect(100,500, 100, 15);
   fill(0,0,0);
   rect(425,250, 100, 15);
@@ -69,16 +88,33 @@ fill(1,1,1);
   text("flame", 415,345) 
   text("ember", 485,345)
 fill(1,1,1);
-  /*quad(425, 275, 525, 275, 525, 350, 425, 350);
-  quad(100, 525, 200, 525, 200, 600, 100, 600);
-  line(425, 312.5, 525, 312.5);
-  line(475, 275, 475, 350);
-  line(100, 562.5, 200, 562.5);
-  line(150, 525, 150, 600); */   
+  /*rect(150,525, 80, 50);
+    rect(70,525, 80, 50);
+    rect(150,575, 80, 50);
+    rect(70,575, 80, 50);
+   */   
 }
 
 function mouseClicked() {
   if (mouseX< 230 && mouseY< 575 && mouseX > 150 && mouseY > 525 && hp2 > 0) {
+    hp2 = hp2-10;
+  } else {
+    value = 0;
+  }
+
+if (mouseX< 230 && mouseY< 625 && mouseX > 150 && mouseY > 576 && hp2 > 0) {
+    hp2 = hp2-10;
+  } else {
+    value = 0;
+  }
+
+  if (mouseX< 150 && mouseY< 575 && mouseX > 70 && mouseY > 525 && hp2 > 0) {
+    hp2 = hp2-10;
+  } else {
+    value = 0;
+  }
+
+  if (mouseX< 150 && mouseY< 625 && mouseX > 70 && mouseY > 576 && hp2 > 0) {
     hp2 = hp2-10;
   } else {
     value = 0;
