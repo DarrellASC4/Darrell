@@ -141,9 +141,15 @@ function keyPressed() {
   }
 
 }
+
+setTimeout(function(){ 
+    alert("Hello");
+    x=300
+    x<=301
+    x>=299     
+}, 3000);
  
       
-
   
 
 /*if (mouseX< 230 && mouseY< 625 && mouseX > 150 && mouseY > 576 && hp2 > 0) {

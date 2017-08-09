@@ -1,7 +1,7 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<meta charset="UFT-8">
+    <meta charset="UFT-8">
 	<title>Tic Tac Toe</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,18 +11,15 @@
     <script src="https://apis.google.com/js/platform.js" async defer></script>
 	<link href='http://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet'>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script type="text/javascript" src="toe.js"></script>
-    <link rel="stylesheet" href="tac.css">
 
-    
 
 </head>
 <body>
-   
-   <h3>My Opponent's Location</h3>
+      
     <div id="map"></div>
-	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCzArXP9MhWekRSYS5gE1sJ_Ol8kjD7Gc&callback=initMap"
-  type="text/javascript"></script>
+	<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBT5KVCJt1UwfuHr54JdS8-9aXSSnT9Dgs&callback=initMap">
+    </script>
 	    <script>
       function initMap() {
         var uluru = {lat: -25.363, lng: 131.044};
@@ -36,36 +33,9 @@
         });
       }
     </script>
-
-	<div class="container">
-       <h2>You: __ points</h2>
-       <h2>Opponent: __ points</h2>
-		<h1>Tic Tac Bro</h1>
-
-		<p>A simple game of tic tac toe to play online and/or with friends<br/>
-			You play as <span class="red">X</span> and the other player plays as <span class="blue">O</span><br/>
-			Start by choosing a square to play.
-            C'mon All Stars Dare Greatly!</p>
-
-
-		<div class="button" id="reset-button">Reset</div>
-
-	</div>
-
-	<div class="tic-tac-toe">
-		<div id="square1" class="tile free"></div>
-		<div id="square2" class="tile free"></div>
-		<div id="square3" class="tile free"></div>
-		<div id="square4" class="tile free"></div>
-		<div id="square5" class="tile free"></div>
-		<div id="square6" class="tile free"></div>
-		<div id="square7" class="tile free"></div>
-		<div id="square8" class="tile free"></div>
-		<div id="square9" class="tile free"></div>
-	</div>
-
-	<footer class="container">Made with code by <a>The Geysers</a><footer>
-    <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+    
+    	<footer class="container">Made with code by <a>The Geysers</a><footer>
+    <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark" onclick="location.href='space.html'"></div>
     <script>
       function onSignIn(googleUser) {
         // Useful data for your client-side scripts:
@@ -82,6 +52,5 @@
         console.log("ID Token: " + id_token);
       };
       </script>
-
 </body>
 </html>

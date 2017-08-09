@@ -1,36 +1,82 @@
-console.log("Choose Rock Paper or Scissors");
-var playerChoices = ['R', 'P', 'S'];
-var playerChoice = playerChoices[Math.floor(Math.random()*3)];
+ 
+var choicePlayer;
+var choices = ["Rock", "Paper", "Scissors"];
+var score = 0;
 
-//computer's random choice
-var compChoices = ['R', 'P', 'S'];
-var compChoice = compChoices[Math.floor(Math.random()*3)];
-console.log(playerChoice + " vs " + compChoice);
-if (playerChoice == compChoice)
-{
-    console.log("It's a tie");
+function playerRock(){
+    choicePlayer = "Rock";
+    choiceComp = choices[Math.floor(Math.random()*3)];
+    if (choiceComp == "Scissors")
+    {
+        $("#computerChoice").html("<p id='computerChoice'> Computer chose " + choiceComp + "</p>");
+        $("#result").html("<p id='result'> Player wins! </p>");
+        score+=10;
+        $('#computerChoice').append("<p>"+score+"</p>");
+    }
+    else if (choiceComp == "Paper")
+    {
+        $("#computerChoice").html("<p id='computerChoice'> Computer chose " + choiceComp + "</p>");
+        $("#result").html("<p id='result'> Computer wins! </p>");
+        $('#computerChoice').append("<p>"+score+"</p>");
+        
+    }
+    else
+    {
+        $("#computerChoice").html("<p id='computerChoice'> Computer chose " + choiceComp + "</p>");
+        $("#result").html("<p id='result'> Its a tie! </p>");
+        $('#computerChoice').append("<p>"+score+"</p>");
+    }
 }
-else if(compChoice == 'P')
-{
-  console.log("Computer Wins")
+function playerScissors(){
+    choicePlayer = "Scissors";
+    choiceComp = choices[Math.floor(Math.random()*3)];
+    if (choiceComp == "Scissors")
+    {
+        $("#computerChoice").html("<p id='computerChoice'> Computer chose " + choiceComp + "</p>");
+        $("#result").html("<p id='result'> Its a tie! </p>");
+        $('#computerChoice').append("<p>"+score+"</p>");
+    }
+    else if (choiceComp == "Paper")
+    {
+        $("#computerChoice").html("<p id='computerChoice'> Computer chose " + choiceComp + "</p>");
+        $("#result").html("<p id='result'> Player wins! </p>");
+        score+=10;
+        $('#computerChoice').append("<p>"+score+"</p>");
+    }
+    else
+    {
+        $("#computerChoice").html("<p id='computerChoice'> Computer chose " + choiceComp + "</p>");
+        $("#result").html("<p id='result'> Computer wins! </p>");
+        $('#computerChoice').append("<p>"+score+"</p>");
+    }
 }
-   else if(compChoice == 'S')
-{
-    console.log("Player Wins")
+function playerPaper(){
+    choicePlayer = "Paper";
+    choiceComp = choices[Math.floor(Math.random()*3)];
+    if (choiceComp == "Scissors")
+    {
+        $("#computerChoice").html("<p id='computerChoice'> Computer chose " + choiceComp + "</p>");
+        $("#result").html("<p id='result'> Computer wins! </p>");
+        $('#computerChoice').append("<p>"+score+"</p>");
+    }
+    else if (choiceComp == "Paper")
+    {
+        $("#computerChoice").html("<p id='computerChoice'> Computer chose " + choiceComp + "</p>");
+        $("#result").html("<p id='result'> Its a tie! </p>");
+        $('#computerChoice').append("<p>"+score+"</p>");
+    }
+    else
+    {
+        $("#computerChoice").html("<p id='computerChoice'> Computer chose " + choiceComp + "</p>");
+        $("#result").html("<p id='result'> Player wins! </p>");
+        score+=10
+        $('#computerChoice').append("<p>"+score+"</p>");
+        
+    }
 }
-else if(playerChoice == 'P' && compChoice == 'S')
-{
-    console.log("Computer Wins")
-}
-else if(playerChoice == 'P' && compChoice == 'R')
-{
-    console.log("Player Wins")
-}
-else if(playerChoice == 'S' && compChoice == 'R')
-{
-    console.log("Computer Wins")
-}
-else if(playerChoice == 'S' && compChoice == 'P')
-{
-    console.log("Player Wins")
-}
+
+$( document ).ready(function() {
+    $('#computerChoice').append("<p>"+score+"</p>");
+});
+
+$('#computerChoice').append("<p>"+score+"</p>");
