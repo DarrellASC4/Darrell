@@ -6,6 +6,7 @@ function setup(){
 var x = 300;
 var y = 500;
 var Bullets=[]
+var score = 0;
 function enemyShoot(){
   
 }
@@ -28,6 +29,7 @@ var hit10 = false
 
                 if (Bullets[i].X< 70 && Bullets[i].Y< 70 && Bullets[i].X > 30 && Bullets[i].Y > 30) {
                 hit1 = true
+                score++
                 }
             
                 if (Bullets[i].X< 130 && Bullets[i].Y< 90 && Bullets[i].X > 90 && Bullets[i].Y > 10) {
@@ -142,13 +144,43 @@ function keyPressed() {
 
 }
 
-setTimeout(function(){ 
-    alert("Hello");
+/*setTimeout(function(){ 
+    alert("Time is up");
     x=300
     x<=301
     x>=299     
-}, 3000);
- 
+}, 12000);*/
+
+function countdown(minutes) {
+    var seconds = 60;
+    var mins = minutes
+    function tick() {
+        var counter = document.getElementById("counter");
+        var score = document.getElementById("score");
+        
+        var current_minutes = mins-1
+        seconds--;
+        counter.innerHTML = current_minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds);
+        if( seconds > 0 ) {
+            setTimeout(tick, 1000);
+        } else {
+            
+            if(mins > 1){
+                
+                countdown(mins-1);           
+                    
+            }
+        }
+    }
+    tick();
+}
+
+countdown(1);
+
+//if (hit1 == true){
+ //score++
+//}
+
       
   
 

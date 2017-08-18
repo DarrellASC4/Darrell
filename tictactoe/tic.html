@@ -19,50 +19,22 @@
 </head>
 <body>
    
-   <h3>My Opponent's Location</h3>
-    <div id="map"></div>
-	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCzArXP9MhWekRSYS5gE1sJ_Ol8kjD7Gc&callback=initMap"
-  type="text/javascript"></script>
-	    <script>
-      function initMap() {
-        var uluru = {lat: -25.363, lng: 131.044};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4,
-          center: uluru
-        });
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
-        });
-      }
-    </script>
+   <h1>My First Google Map</h1>
 
-	<div class="container">
-       <h2>You: __ points</h2>
-       <h2>Opponent: __ points</h2>
-		<h1>Tic Tac Bro</h1>
+<div id="googleMap" style="width:100%;height:400px;"></div>
 
-		<p>A simple game of tic tac toe to play online and/or with friends<br/>
-			You play as <span class="red">X</span> and the other player plays as <span class="blue">O</span><br/>
-			Start by choosing a square to play.
-            C'mon All Stars Dare Greatly!</p>
+<script>
+function myMap() {
+var mapProp= {
+    center:new google.maps.LatLng(51.508742,-0.120850),
+    zoom:5,
+};
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+</script>
 
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUiX6LW5Dp_cum9dsdg5SHmOFElT0C1bs&callback=myMap"></script>
 
-		<div class="button" id="reset-button">Reset</div>
-
-	</div>
-
-	<div class="tic-tac-toe">
-		<div id="square1" class="tile free"></div>
-		<div id="square2" class="tile free"></div>
-		<div id="square3" class="tile free"></div>
-		<div id="square4" class="tile free"></div>
-		<div id="square5" class="tile free"></div>
-		<div id="square6" class="tile free"></div>
-		<div id="square7" class="tile free"></div>
-		<div id="square8" class="tile free"></div>
-		<div id="square9" class="tile free"></div>
-	</div>
 
 	<footer class="container">Made with code by <a>The Geysers</a><footer>
     <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>

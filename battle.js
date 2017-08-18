@@ -1,6 +1,6 @@
 var circles = [];
 var gridSize= 100;
-var gridcheck = [""];
+var grid= [[0],[0] 0,0];
 
 //creating a random number 
 function rand(num) {
@@ -26,11 +26,9 @@ function draw() {
                 for (var j = 0; j <6; j++) {
                     fill (200,200,200);
                     rect(gridSize*i,gridSize*j,gridSize,gridSize);
-                    if (xaxis>gridSize*i && xaxis<gridSize*i+gridSize && yaxis>gridSize*j && yaxis<gridSize*j+gridSize){
-                            gridcheck.push(1); 
+                    
+                    if (grid [i][j]){
                     }
-                    else {
-                        gridcheck.push(0);
                     }
                 }
             }
@@ -38,11 +36,11 @@ function draw() {
 
         console.log(gridcheck)
 
-/*function mouseClicked() {
-    if 
+function mouseClicked() {
+    if gridcheck
 }
 
-
+//height/gridesize*i
 
    // if (mouseIsPressed)
    

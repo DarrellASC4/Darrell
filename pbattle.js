@@ -10,8 +10,12 @@ function draw() {
   background(51, 153, 102);
 
   fill(255, 255, 0);
+   triangle(180, 380, 213, 270, 241, 325);
+   triangle(131, 380, 103, 270, 70, 325);
   ellipse(150, 400, 120, 120);
   
+ 
+
   fill(1,1,1)
   ellipse(130, 380, 25, 25)
   ellipse(170, 380, 25, 25)
@@ -96,6 +100,31 @@ fill(1,1,1);
 }
 
 function mouseClicked() {
+  if (mouseX< 230 && mouseY< 575 && mouseX > 150 && mouseY > 525 && hp2 > 0) {
+    hp2 = hp2-10;
+  } else {
+    value = 0;
+  }
+
+if (mouseX< 230 && mouseY< 625 && mouseX > 150 && mouseY > 576 && hp2 > 0) {
+    hp2 = hp2-10;
+  } else {
+    value = 0;
+  }
+
+  if (mouseX< 150 && mouseY< 575 && mouseX > 70 && mouseY > 525 && hp2 > 0) {
+    hp2 = hp2-10;
+  } else {
+    value = 0;
+  }
+
+  if (mouseX< 150 && mouseY< 625 && mouseX > 70 && mouseY > 576 && hp2 > 0) {
+    hp2 = hp2-10;
+  } else {
+    value = 0;
+  }
+
+
   if (mouseX< 230 && mouseY< 575 && mouseX > 150 && mouseY > 525 && hp2 > 0) {
     hp2 = hp2-10;
   } else {
